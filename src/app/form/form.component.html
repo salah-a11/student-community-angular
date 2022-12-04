@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="text-primary"> List of Student Registered for the Community </h1>
+  <hr class="my-5">
+    <table class="table table-light">
+
+        <thead>
+          <tr >
+            
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Image</th>
+            <th scope="col">Age</th>
+            <th scope="col">Country</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+      
+          <tr *ngFor="let stud of students">
+            <th scope="row">{{stud.name}}</th>
+            <td>{{stud.email}}</td>
+            <td>{{stud.dob}}</td>
+            <td><img [src] = "stud.image" style="max-width: fit-content;" /></td>
+            <td>{{stud.age}} years.</td>
+            <td>{{stud.country}}</td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
